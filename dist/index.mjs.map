@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.ts"],"sourcesContent":["export interface User {\n  id: number;\n  name: string;\n}\n\nexport function greet(u: User) {\n  return `Hello, ${u.name}!`;\n}\n"],"mappings":";AAKO,SAAS,MAAM,GAAS;AAC7B,SAAO,UAAU,EAAE,IAAI;AACzB;","names":[]}
