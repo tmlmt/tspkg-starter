@@ -21,7 +21,6 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "pnpm run clean && tsup",
-    "prepare": "pnpm build",
     "test": "vitest run",
     "test:watch": "vitest watch",
     "lint": "eslint 'src/**/*.{ts,tsx}' 'tests/**/*.{ts,tsx}' --max-warnings=0",
