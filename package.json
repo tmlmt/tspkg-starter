@@ -1,0 +1,44 @@
+{
+  "name": "@tmlmt/tspkg-starter",
+  "version": "0.1.0",
+  "description": "My awesome shared utility",
+  "author": "Thomas Lamant <tom@tmlmt.com>",
+  "packageManager": "pnpm@10.14.0",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "pnpm run clean && tsup",
+    "prepare": "pnpm build",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "lint": "eslint 'src/**/*.{ts,tsx}' 'tests/**/*.{ts,tsx}' --max-warnings=0",
+    "format": "prettier --write .",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "24.2.1",
+    "@typescript-eslint/eslint-plugin": "8.39.0",
+    "@typescript-eslint/parser": "8.39.0",
+    "eslint": "9.33.0",
+    "eslint-config-prettier": "10.1.8",
+    "prettier": "3.6.2",
+    "rimraf": "6.0.1",
+    "tsup": "8.5.0",
+    "typescript": "5.9.2",
+    "vitest": "3.2.4"
+  },
+  "license": "MIT"
+}
